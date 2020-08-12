@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     # Activity App
     'activity',
     'utils',
+
+    # 3rd Party
+    'timezone_field',
 ]
 
 MIDDLEWARE = [
