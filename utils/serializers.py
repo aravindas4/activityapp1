@@ -13,3 +13,10 @@ class TimeZoneField(serializers.ChoiceField):
 
     def to_representation(self, value):
         return str(super().to_representation(value))
+
+
+class CustomDateTimeField(serializers.DateTimeField):
+
+    def to_representation(self, value):
+        output_format = "%b %d %Y  %I:%M%p"
+        return value.strftime(output_format)

@@ -1,10 +1,13 @@
 from utils.models import get_uuid
-from utils.serializers import BaseSerializer, TimeZoneField
+from utils.serializers import (BaseSerializer, TimeZoneField,
+                               CustomDateTimeField)
 
 from .models import ActivityPeriod, User
 
 
 class ActivityPeriodSerializer(BaseSerializer):
+    start_time = CustomDateTimeField()
+    end_time = CustomDateTimeField()
 
     class Meta:
         model = ActivityPeriod
