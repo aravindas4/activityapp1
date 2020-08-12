@@ -7,7 +7,9 @@ from .serializers import UserSerializer
 
 
 class UserModelViewSet(ModelViewSet):
-    queryset = User.objects.all()
+    queryset = User.objects.prefetch_related(
+        'activity_periods'
+    )
     serializer_class = UserSerializer
 
     @action(detail=False, methods=['get'], url_path='activity')
