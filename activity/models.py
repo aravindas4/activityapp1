@@ -10,6 +10,9 @@ class User(Base, AbstractUser):
     real_name = models.CharField(_('real name'), max_length=150)
     tz = TimeZoneField(_('timezone'), default='Asia/Kolkata')
 
+    USERNAME_FIELD = 'id'
+    REQUIRED_FIELDS = []
+
     class Meta:
         ordering = ('-created',)
 
