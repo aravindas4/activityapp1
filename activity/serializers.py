@@ -1,6 +1,6 @@
 from utils.models import get_uuid
-from utils.serializers import (BaseSerializer, TimeZoneField,
-                               CustomDateTimeField)
+from utils.serializers import (BaseSerializer, CustomDateTimeField,
+                               TimeZoneField)
 
 from .models import ActivityPeriod, User
 

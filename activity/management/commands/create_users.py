@@ -1,6 +1,7 @@
 import json
 
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
+
 from activity.serializers import UserSerializer
 
 
@@ -18,7 +19,7 @@ class Command(BaseCommand):
 
         # file_name = kwargs['file_name']
         file_name = 'sample.json'
-        json_data = open(path+file_name)
+        json_data = open(path + file_name)
         users = json.load(json_data)
 
         for user in users:

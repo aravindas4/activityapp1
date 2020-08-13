@@ -3,3 +3,6 @@
 ipython==7.16.1
 
 django-silk==4.1.0
+
+isort==5.4.0
+flake8==3.8.3

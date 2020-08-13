@@ -1,7 +1,8 @@
 import os
-from .base import *
 
-INSTALLED_APPS += [
+from .base import *  # noqa: F401, F403
+
+INSTALLED_APPS += [  # noqa: F405
     'silk',
 ]
 
@@ -40,7 +41,7 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['file',],
+            'handlers': ['file', ],
             'level': 'DEBUG',
             'propagate': True,
         },
