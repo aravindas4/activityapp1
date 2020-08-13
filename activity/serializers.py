@@ -15,7 +15,7 @@ class ActivityPeriodSerializer(BaseSerializer):
 
 
 class UserSerializer(BaseSerializer):
-    activity_periods = ActivityPeriodSerializer(many=True)
+    activity_periods = ActivityPeriodSerializer(many=True)  # nested data
     tz = TimeZoneField()
 
     class Meta:

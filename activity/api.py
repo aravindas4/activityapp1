@@ -14,6 +14,34 @@ class UserModelViewSet(ModelViewSet):
 
     @action(detail=False, methods=['get'], url_path='activity')
     def get_user_activity(self, request, *args, **kwargs):
+        '''
+        Returns all users and thier respective activities' details
+        input: None
+        output: {
+            "ok": true,
+            "members": [
+                {
+                    "id": "8567153BD",
+                    "real_name": "Glinda Southgood",
+                    "tz": "Asia/Kolkata",
+                    "activity_periods": [
+                        {
+                            "start_time": "Aug 12 2020  04:15AM",
+                            "end_time": "Aug 12 2020  05:15AM"
+                        },
+                        {
+                            "start_time": "Sep 12 2020  04:15AM",
+                            "end_time": "Sep 12 2020  05:15AM"
+                        },
+                        {
+                            "start_time": "Oct 12 2020  04:15AM",
+                            "end_time": "Oct 12 2020  05:15AM"
+                        }
+                    ]
+                }
+            ]
+        }
+        '''
         response = {
             "ok": False
         }
