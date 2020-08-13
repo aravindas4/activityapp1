@@ -120,5 +120,31 @@ This repository contains 1 API
             ]
         }
     ]
-}```
+}
+```
+* 
+## Setup for production
+* Create and activate `.env`
+* Install packages using`pip install -r requirements/prod.txt`
+* Create `db.sqlite3` DB and and update `/var/www/aravindas_pythonanywhere_com_wsgi.py` with code 
+```import os
+import sys
 
+# assuming your django settings file is at '/home/aravindas/mysite/mysite/settings.py'
+# and your manage.py is is at '/home/aravindas/mysite/manage.py'
+path = '/home/aravindas/.virtualenvs/activityapp1/activityapp1'
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'activityapp.settings.prod'
+
+# then:
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+```
+
+* In same folder conatining, `.env.example`, replicate into `.env` and replace dummy values with actual crednetials
+* restart virtualenv and load the wsgi
+
+## Test Production
+- URL: `http://aravindas.pythonanywhere.com/user/activity/`
