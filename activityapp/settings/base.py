@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     # 3rd Party
     'timezone_field',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
