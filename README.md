@@ -122,7 +122,8 @@ This repository contains 1 API
     ]
 }
 ```
-* 
+* Prjoect has been query optimized using `django-silk`
+
 ## Setup for production
 * Create and activate `.env`
 * Install packages using`pip install -r requirements/prod.txt`
@@ -147,4 +148,4 @@ application = get_wsgi_application()
 * restart virtualenv and load the wsgi
 
 ## Test Production
-- URL: `http://aravindas.pythonanywhere.com/user/activity/`
+- URL: http://aravindas.pythonanywhere.com/user/activity/
